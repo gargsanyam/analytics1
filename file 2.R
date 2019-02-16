@@ -145,6 +145,6 @@ students[students$marks1 >60, ]
 students[students$gender =='F', ]
 students[students$gender =='F'|students$college == 'SRCC', ]
 #highest from all colleges
-student %>% filter(gender == 'M' & marks1 > 60)
+students%>% filter(gender == 'M' & marks1 > 60)
 students %>% group_by(gender) %>% summarise (max(marks1), max(marks2))
 students %>% filter(college == 'FMS' ) %>% select(marks1, marks2)
