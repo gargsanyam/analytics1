@@ -178,3 +178,9 @@ students %>% tally()
 students %>% group_by(gender, college) %>% summarise(countTotal = n(), mean(marks1), max(marks2))
 
 students %>% mutate(totalMarks = marks1 + 1.2 * marks2) %>% arrange(-totalMarks) %>% head(n=2)                                                   
+#
+students %>% slice(seq(1, 30, 2)) #every alternate row
+?slice
+students %>% sample_n(5) #random 5 rows
+students %>% sample_frac(.2) #random 20%
+
