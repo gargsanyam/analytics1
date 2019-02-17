@@ -56,9 +56,9 @@ summary(fit2)
 #create a dataframe of new sample values
 range(omni$price) ; range(omni$promotion)
 (ndata2 = data.frame(price=c(60,70), promotion=c(300,400)))
-p2sales = predict(fit2, newdata=ndata2)
+(p2sales = predict(fit2, newdata=ndata2))
 cbind(ndata2, p2sales)
-
+head(omni)
 #Assumptions
 par(mfrow=c(2,2))
 plot(fit2)
@@ -95,3 +95,13 @@ cbind(omni, predict(fit2, newdata = data.frame(omni$price, omni$promotion)))
 cbind(omni, fitted(fit2))
 cbind(omni, fitted(fit2), omni$sales - fitted(fit2), residuals(fit2))
 
+
+
+#divided data into parts
+#training set = 70%
+#test set = 30%
+#
+head(women)
+nrow(women)
+library(dplyr)
+women %>% sample_frac(.7) -> train1

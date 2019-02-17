@@ -5,6 +5,8 @@ nrow(mtcars)
 sample(x=1:32, size=.7 * 32)
 index = sample(x=1:nrow(mtcars), size=.7 * nrow(mtcars), replace=F)
 index
+mtcars[c(1,4)]
+mtcars[-c(1,4)]
 train= mtcars[index,]
 test= mtcars[-index,]
 nrow(train)
@@ -51,3 +53,4 @@ training
 testing
 table(training$am)
 table(testing$am)
+
