@@ -44,7 +44,7 @@ summary(fit2)
 #price  : -53 , pvalue = 9.2e-09 < 0.05 *** : Significant
 #keeping promotion constant, if price is increased by 1 unit, salesqty decreases by 53 units
 #promotion  : +3.6 , pvalue = 9.82e-06 < 0.05 ***: Significant
-#keeping price constant, if promotion is increased by 1 unit, salesqty increases by 53 units
+#keeping price constant, if promotion is increased by 1 unit, salesqty increases by 3 units
 
 fitted(fit2)
 omni$sales
@@ -94,3 +94,4 @@ head(omni)
 cbind(omni, predict(fit2, newdata = data.frame(omni$price, omni$promotion)))
 cbind(omni, fitted(fit2))
 cbind(omni, fitted(fit2), omni$sales - fitted(fit2), residuals(fit2))
+
