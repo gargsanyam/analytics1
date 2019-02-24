@@ -65,3 +65,4 @@ head(negative.tweets)
 neutral.tweets <- word.df[sent.value == 0]
 head(neutral.tweets)
 #----
+
